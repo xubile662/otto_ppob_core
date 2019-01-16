@@ -38,5 +38,4 @@ dependencies {
 
     implementation project(path: ':otto_ppob_core')
     implementation project(path: ':otto_pinsec')
-
 }
