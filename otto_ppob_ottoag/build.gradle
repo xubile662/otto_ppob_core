@@ -47,8 +47,8 @@ dependencies {
     implementation 'net.cachapa.expandablelayout:expandablelayout:2.9.2'
     implementation 'org.greenrobot:eventbus:3.1.1'
 
-    implementation 'com.github.xubile662:cautils:1.0.3.a'
-    implementation 'com.github.xubile662.ottolib:ottomart_viewmodule:1.0.1'
+    implementation 'com.github.xubile662:cautils:1.0.+'
+    implementation 'com.github.xubile662.ottolib:ottomart_viewmodule:1.0.+'
 
     implementation project(path: ':otto_ppob_core')
 }

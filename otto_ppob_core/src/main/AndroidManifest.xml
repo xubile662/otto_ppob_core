@@ -4,8 +4,6 @@
     <application>
         <activity android:name=".View.Ppob_Main.PpobMainViewActivity" />
 
-        <activity android:name=".View.Ppob_Main.OttoPpobActivity" />
-
     </application>
 </manifest>
 

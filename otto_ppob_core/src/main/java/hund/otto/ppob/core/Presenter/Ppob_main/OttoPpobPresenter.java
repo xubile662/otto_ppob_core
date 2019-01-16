@@ -2,17 +2,12 @@ package hund.otto.ppob.core.Presenter.Ppob_main;
 
 import android.content.SharedPreferences;
 
-import com.otto.mart.pinsec.presenter.SessionManager;
-
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
-import app.beelabs.com.codebase.di.component.AppComponent;
-import hund.otto.ppob.core.CORE;
 import hund.otto.ppob.core.Interactor.Model.Event.PinInteractorCallEvent;
 import hund.otto.ppob.core.View.Ppob_Main.PpobMainViewInterface;
-import hund.otto.ppob.core.View.Ppob_Main.OttoPpobActivity;
 
 public class OttoPpobPresenter {
 

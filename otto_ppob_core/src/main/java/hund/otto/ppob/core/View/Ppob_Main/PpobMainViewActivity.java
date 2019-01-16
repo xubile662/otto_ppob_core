@@ -3,7 +3,6 @@ package hund.otto.ppob.core.View.Ppob_Main;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.view.View;
@@ -11,7 +10,6 @@ import android.widget.ImageView;
 
 import com.jaeger.library.StatusBarUtil;
 import com.ogaclejapan.smarttablayout.SmartTabLayout;
-import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItem;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems;
 import com.otto.mart.pinsec.view.PinInputDialog;
@@ -35,7 +33,6 @@ public class PpobMainViewActivity extends BaseActivity implements PpobMainViewIn
     private ViewPager vp;
     private FragmentPagerItemAdapter smtAdpt;
     private int selectedItemIndex;
-    private OttoPpobActivity.PpobParentActivityCallback listener;
     private ImageView toolbarBack;
     private boolean isPinActivityCanceled, isPinActivityTriggered;
     private FragmentPagerItems fragments;
@@ -66,19 +63,13 @@ public class PpobMainViewActivity extends BaseActivity implements PpobMainViewIn
         vp = findViewById(R.id.viewpager);
         smt = findViewById(R.id.viewpagertab);
         toolbarBack = findViewById(R.id.toolbar_back);
-        fragments = FragmentPagerItems.with(this).create();
-
+        fragments = new FragmentPagerItems(this);
         presenter = new OttoPpobPresenter(this);
     }
 
     private void initContent() {
         StatusBarUtil.setDarkMode(this);
         StatusBarUtil.setColor(this, ContextCompat.getColor(this, R.color.prussian_blue));
-        smtAdpt = new FragmentPagerItemAdapter(getSupportFragmentManager(), fragments);
-
-        smtAdpt = new FragmentPagerItemAdapter(getSupportFragmentManager(), fragments);
-        vp.setAdapter(smtAdpt);
-        smt.setViewPager(vp);
 
         if (selectedItemIndex != 0) {
             vp.setCurrentItem(selectedItemIndex, true);
@@ -90,12 +81,17 @@ public class PpobMainViewActivity extends BaseActivity implements PpobMainViewIn
                 finish();
             }
         });
-        //test
+
         List<FragmentTransactionEvent> evt = CORE.getPages();
+        FragmentPagerItems.Creator fragtems = FragmentPagerItems.with(this);
         for (FragmentTransactionEvent ev :
                 evt) {
-            addProductFragment(ev.getTitle(), ev.getFragmentClass());
+            fragtems.add(ev.getTitle(), ev.getFragmentClass());
         }
+
+        smtAdpt = new FragmentPagerItemAdapter(getSupportFragmentManager(), fragtems.create());
+        vp.setAdapter(smtAdpt);
+        smt.setViewPager(vp);
     }
 
     public boolean isPinActivityTriggered() {
@@ -157,12 +153,5 @@ public class PpobMainViewActivity extends BaseActivity implements PpobMainViewIn
     public void removeProgressDialog() {
         ProgressDialogComponent.dismissProgressDialog(this);
     }
-
-    @Override
-    public void addProductFragment(String title, Object classObject) {
-        fragments.add(FragmentPagerItem.of(title, (Class<? extends Fragment>) classObject));
-        smtAdpt.notifyDataSetChanged();
-    }
-
 
 }
