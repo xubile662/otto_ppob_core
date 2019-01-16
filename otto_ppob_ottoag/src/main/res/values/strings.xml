@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">otto_ppob_pulsa</string>
+
+    <string name="done_favsave">data berhasil tersimpan</string>
+    <string name="done_favdel">data berhasil terhapus</string>
+    <string name="fail_api">Terjadi kesalahan pada server</string>
+    <string name="fail_connection">Terjadi kesalahan pada koneksi jaringan anda</string>
+
+</resources>

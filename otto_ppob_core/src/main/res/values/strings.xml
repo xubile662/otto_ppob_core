@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">My Library</string>
+
+    <string name="error_apifailed">Gagal Menghubungi Server</string>
+    <string name="error_title_dialog_def">Error</string>
+</resources>
