@@ -12,7 +12,7 @@ import com.jaeger.library.StatusBarUtil;
 import com.ogaclejapan.smarttablayout.SmartTabLayout;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems;
-import com.otto.mart.pinsec.view.PinInputDialog;
+import com.otto.hund.pinsec.view.PinInputDialog;
 
 import org.greenrobot.eventbus.EventBus;
 

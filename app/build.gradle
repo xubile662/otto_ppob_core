@@ -39,6 +39,9 @@ dependencies {
     implementation 'com.github.xubile662:cautils:1.0.4'
     implementation 'com.github.xubile662:ottolib:1.0.1'
 
-    implementation project(path: ':otto_ppob_core')
     implementation project(path: ':otto_pinsec')
+    implementation project(path: ':otto_ppob_core')
+    implementation project(path: ':otto_ppob_ottoag')
+
+
 }
