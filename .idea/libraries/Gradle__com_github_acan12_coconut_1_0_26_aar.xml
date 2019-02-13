@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.acan12:coconut:1.0.26@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/coconut-1.0.26.aar/eb996d7a387fdcb5692c663ec0831929/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/coconut-1.0.26.aar/eb996d7a387fdcb5692c663ec0831929/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

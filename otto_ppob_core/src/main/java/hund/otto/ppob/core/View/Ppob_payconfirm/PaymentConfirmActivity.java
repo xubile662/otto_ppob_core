@@ -7,8 +7,10 @@ import hund.otto.ppob.core.Interactor.Model.Misc.WidgetBuilderModel;
 
 public class PaymentConfirmActivity extends BaseActivity implements PaymentConfirmInterface {
 
+
     @Override
     public void addPaymentConfirmData(List<WidgetBuilderModel> models) {
 
     }
+
 }

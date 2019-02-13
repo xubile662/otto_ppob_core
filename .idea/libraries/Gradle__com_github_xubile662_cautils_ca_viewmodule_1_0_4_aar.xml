@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.xubile662.cautils:ca_viewmodule:1.0.4@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ca_viewmodule-1.0.4.aar/c0f5970eb2ca3c89f012ba9219f9686e/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ca_viewmodule-1.0.4.aar/c0f5970eb2ca3c89f012ba9219f9686e/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.xubile662.cautils/ca_viewmodule/1.0.4/369206b17ba8dfb72009dc72d7508b611ad21668/ca_viewmodule-1.0.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

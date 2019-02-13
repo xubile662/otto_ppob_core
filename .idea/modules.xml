@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/otto-ppob-core.iml" filepath="$PROJECT_DIR$/otto-ppob-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/otto_pinsec/otto_pinsec.iml" filepath="$PROJECT_DIR$/otto_pinsec/otto_pinsec.iml" />
+      <module fileurl="file://$PROJECT_DIR$/otto_ppob_core/otto_ppob_core.iml" filepath="$PROJECT_DIR$/otto_ppob_core/otto_ppob_core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/otto_ppob_ottoag/otto_ppob_ottoag.iml" filepath="$PROJECT_DIR$/otto_ppob_ottoag/otto_ppob_ottoag.iml" />
+    </modules>
+  </component>
+</project>

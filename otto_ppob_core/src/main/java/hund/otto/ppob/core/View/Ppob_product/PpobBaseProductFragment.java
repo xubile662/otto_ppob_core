@@ -40,7 +40,6 @@ public class PpobBaseProductFragment extends BaseFragment {
 
     public interface PpobBaseProductCallback {
         void onProductInputDone(int productType, BasePpobPaymentRequestModel model);
-
         void onProductInputUnDone();
     }
 

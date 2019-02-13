@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.xubile662.cautils:ca_util:1.0.4@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ca_util-1.0.4.aar/48b9276b8ae94d6dd17ea23311a948fe/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ca_util-1.0.4.aar/48b9276b8ae94d6dd17ea23311a948fe/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.xubile662.cautils/ca_util/1.0.4/e23ed867616e0c713be949a1baf0f24372b6f816/ca_util-1.0.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

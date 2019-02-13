@@ -54,6 +54,17 @@ public class PpobOttoagProductViewPresenter implements
         initComponent();
     }
 
+
+    public PpobOttoagProductViewPresenter(PpobOttoagProductViewInterface viewParent,
+                                          Object base,
+                                          Context context,
+                                          String endpoint) {
+        gContext = context;
+        this.interactor = new PpobOttoagInteractor(base, endpoint, CORE.getCallerContext(), CORE.getAppComponent());
+        this.view = viewParent;
+        initComponent();
+    }
+
     private void initComponent() {
         prm = new PpobOttoagPaymentRequestModel();
     }
