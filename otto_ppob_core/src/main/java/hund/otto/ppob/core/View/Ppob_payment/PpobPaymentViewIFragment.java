@@ -18,18 +18,13 @@ import com.otto.mart.viewmodule.dialog.QrDynamicDialog;
 
 import net.cachapa.expandablelayout.ExpandableLayout;
 
-import app.beelabs.com.codebase.base.BaseActivity;
-import app.beelabs.com.codebase.base.BaseFragment;
-import app.beelabs.com.codebase.component.ProgressDialogComponent;
-import glenn.base.viewmodule.dialog.ErrorDialog;
 import glenn.base.viewmodule.textView.LazyTextview;
 import hund.otto.ppob.core.CORE;
 import hund.otto.ppob.core.Presenter.Ppob_payment.PpobPaymentPresenter;
 import hund.otto.ppob.core.R;
+import hund.otto.ppob.core.View.aBaseViewFragment;
 
-
-public class PpobPaymentViewFragment extends BaseFragment implements PpobPaymentViewInterface {
-
+public class PpobPaymentViewIFragment extends aBaseViewFragment implements PpobPaymentViewInterface {
     private Context mContext;
     private View mView, action0, action1, tv_action, footer;
     private RadioGroup rb_rg;
@@ -91,7 +86,7 @@ public class PpobPaymentViewFragment extends BaseFragment implements PpobPayment
         total = mView.findViewById(R.id.ltv_total);
         footer = mView.findViewById(R.id.footer);
 
-        presenter = new PpobPaymentPresenter(this, CORE.getAppComponent(), this, CORE.getEndpoint());
+        presenter = new PpobPaymentPresenter(getContext(), this, this);
         qrDialog = new QrDynamicDialog(getContext(), getActivity(), true);
 
         ll_payconfirm = mView.findViewById(R.id.ll_payconfirm);
@@ -174,30 +169,9 @@ public class PpobPaymentViewFragment extends BaseFragment implements PpobPayment
         return presenter;
     }
 
-    /**
-     * @param code    errcode server return error code
-     * @param title   dialog title
-     * @param message dialog message
-     */
     @Override
-    public void showErrorMessage(int code, String title, String message) {
-        ErrorDialog eDialog = new ErrorDialog(getContext(), getActivity(), false, false, title, message);
-        eDialog.show();
-    }
+    public void showPaymentView() {
 
-    /**
-     * @param loadingMessage
-     * @param showtoolbar
-     * @param iscancelable
-     */
-    @Override
-    public void showLoadingDialog(String loadingMessage, boolean showtoolbar, boolean iscancelable) {
-        ProgressDialogComponent.showProgressDialog(getContext(), loadingMessage, iscancelable).show();
-    }
-
-    @Override
-    public void hideActiveLoadingDialog() {
-        ProgressDialogComponent.dismissProgressDialog((BaseActivity) getActivity());
     }
 
     /**
@@ -298,4 +272,5 @@ public class PpobPaymentViewFragment extends BaseFragment implements PpobPayment
         this.total.setText(total);
         ll_payconfirm.setVisibility(View.VISIBLE);
     }
+
 }

@@ -1,7 +1,5 @@
 package hund.otto.ppob.core.api.KMB;
 
-import android.content.Context;
-
 import java.util.Map;
 
 import hund.otto.ppob.core.Interactor.Model.KMB.RequestModel.PpobAirPaymentRequestModel;
@@ -18,9 +16,7 @@ import hund.otto.ppob.core.Interactor.Model.KMB.ResponseModel.PpobPulsaPaymentRe
 import hund.otto.ppob.core.Interactor.Model.RequestModel.PpobOttoagPaymentRequestModel;
 import hund.otto.ppob.core.Interactor.Model.ResponseModel.PpobOttoagPaymentResponseModel;
 import hund.otto.ppob.core.Interactor.Model.ResponseModel.base.BasePaymentResponseModel;
-import hund.otto.ppob.core.Presenter.Ppob_payment.PpobPaymentPresenter;
 import retrofit2.Call;
-import retrofit2.Callback;
 import retrofit2.http.Body;
 import retrofit2.http.HeaderMap;
 import retrofit2.http.POST;

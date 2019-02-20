@@ -24,7 +24,7 @@ public class PpobMiscInteractor {
         this.dao = new MiscDao(obj, endpoint, context, appComponent);
     }
 
-    public void getQrStringInt(final PpobPaymentInteractorInterface.QrInteractorInterface callback) {
+    public void getQrStringInt(final PpobPaymentInteractorInterface2 callback) {
         if (dao != null)
             dao.GetQrStringDao(new Callback() {
                 @Override
@@ -49,7 +49,7 @@ public class PpobMiscInteractor {
             });
     }
 
-    public void getQrStringInt(QrStringRequestModel requestModel, final PpobPaymentInteractorInterface.QrInteractorInterface callback) {
+    public void getQrStringInt(QrStringRequestModel requestModel, final PpobPaymentInteractorInterface2 callback) {
         if (dao != null)
             dao.GetQrStringDao(requestModel, new Callback() {
                 @Override
@@ -74,7 +74,7 @@ public class PpobMiscInteractor {
             });
     }
 
-    public void getWalletDataInt(final PpobPaymentInteractorInterface.WalletInteractorInterface callback) {
+    public void getWalletDataInt(final PpobPaymentInteractorInterface2 callback) {
         if (dao != null) {
             dao.GetWalletDataDao(new Callback() {
                 @Override

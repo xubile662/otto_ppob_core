@@ -14,11 +14,9 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import app.beelabs.com.codebase.base.BaseFragment;
-import hund.otto.ppob.core.CORE;
 import hund.otto.ppob.core.Presenter.Ppob_landing.PpobBaseLandingPresenter;
-import hund.otto.ppob.core.Presenter.Ppob_payment.PpobPaymentPresenter;
 import hund.otto.ppob.core.R;
-import hund.otto.ppob.core.View.Ppob_payment.PpobPaymentViewFragment;
+import hund.otto.ppob.core.View.Ppob_payment.PpobPaymentViewIFragment;
 import hund.otto.ppob.core.View.Ppob_product.PpobBaseProductFragment;
 
 /* PpobBaseFragment, use this as product base fragment;
@@ -36,7 +34,6 @@ public class PpobBaseFragment extends BaseFragment implements PpobBaseViewInterf
     private NestedScrollView nsv_parent;
     private childFragmentCallback listener;
     private PpobBaseLandingPresenter presenter;
-
 
     public void setListener(childFragmentCallback listener) {
         this.listener = listener;
@@ -77,7 +74,7 @@ public class PpobBaseFragment extends BaseFragment implements PpobBaseViewInterf
 
     @Override
     public void loadPaymentFragment() {
-        paymentFragment = new PpobPaymentViewFragment();
+        paymentFragment = new PpobPaymentViewIFragment();
         fm.beginTransaction().replace(layout_paymentcontainer.getId(), paymentFragment).commit();
     }
 
@@ -88,9 +85,8 @@ public class PpobBaseFragment extends BaseFragment implements PpobBaseViewInterf
 
     @Override
     public void reLoadPaymentFragment() {
-        paymentFragment = new PpobPaymentViewFragment();
+        paymentFragment = new PpobPaymentViewIFragment();
         fm.beginTransaction().replace(layout_paymentcontainer.getId(), paymentFragment).commit();
-
     }
 
     @Override
@@ -144,7 +140,6 @@ public class PpobBaseFragment extends BaseFragment implements PpobBaseViewInterf
     public void onStop() {
         presenter.onStop();
         super.onStop();
-
     }
 
     public interface childFragmentCallback {

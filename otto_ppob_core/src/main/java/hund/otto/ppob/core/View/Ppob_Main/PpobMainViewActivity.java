@@ -26,8 +26,9 @@ import hund.otto.ppob.core.Interactor.Model.Event.PinInteractorCallDoneEvent;
 import hund.otto.ppob.core.Interactor.Model.Event.PinInteractorCallFailEvent;
 import hund.otto.ppob.core.Presenter.Ppob_main.OttoPpobPresenter;
 import hund.otto.ppob.core.R;
+import hund.otto.ppob.core.View.aBaseViewActivity;
 
-public class PpobMainViewActivity extends BaseActivity implements PpobMainViewInterface {
+public class PpobMainViewActivity extends aBaseViewActivity implements PpobMainViewInterface {
 
     private SmartTabLayout smt;
     private ViewPager vp;
@@ -94,14 +95,6 @@ public class PpobMainViewActivity extends BaseActivity implements PpobMainViewIn
         smt.setViewPager(vp);
     }
 
-    public boolean isPinActivityTriggered() {
-        return isPinActivityTriggered;
-    }
-
-    public boolean isPinActivityCanceled() {
-        return isPinActivityCanceled;
-    }
-
     //interface func
     @Override
     public void callCheckPinActivity() {
@@ -130,7 +123,6 @@ public class PpobMainViewActivity extends BaseActivity implements PpobMainViewIn
             public void onLoadingDone() {
 
             }
-
         });
         isPinActivityTriggered = true;
 

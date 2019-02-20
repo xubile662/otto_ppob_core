@@ -3,18 +3,14 @@ package hund.otto.ppob.core.View.Ppob_payment;
 import android.content.Intent;
 import android.net.Uri;
 
-public interface PpobPaymentViewInterface {
-    void showErrorMessage(int code, String title, String message);
+import hund.otto.ppob.core.View.aBaseViewInterface;
 
-    void showLoadingDialog(String loadingMessage, boolean showtoolbar, boolean iscancelable);
-
-    void hideActiveLoadingDialog();
+public interface PpobPaymentViewInterface extends aBaseViewInterface {
+    void showPaymentView();
 
     void resetViewState();
 
     void toggleNextView();
-
-    void toggleOnPaymentDoneActivity(Intent intent);
 
     void togglePayTypeView();
 
@@ -28,5 +24,5 @@ public interface PpobPaymentViewInterface {
 
     void showPaymentConfirmPage(String modal, String komisi, String total);
 
-
+    void toggleOnPaymentDoneActivity(Intent intent);
 }

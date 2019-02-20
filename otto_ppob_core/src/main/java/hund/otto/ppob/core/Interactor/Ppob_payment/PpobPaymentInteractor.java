@@ -3,6 +3,7 @@ package hund.otto.ppob.core.Interactor.Ppob_payment;
 import android.content.Context;
 
 import app.beelabs.com.codebase.di.component.AppComponent;
+import hund.otto.ppob.core.CORE;
 import hund.otto.ppob.core.Interactor.Model.RequestModel.PpobOttoagPaymentRequestModel;
 import hund.otto.ppob.core.Interactor.Model.ResponseModel.base.BasePaymentResponseModel;
 import hund.otto.ppob.core.api.dao.OttoagDao;
@@ -18,11 +19,11 @@ public class PpobPaymentInteractor {
         this.dao = dao;
     }
 
-    public PpobPaymentInteractor(Object obj, String endpoint, Context context, AppComponent appComponent) {
-        this.dao = new OttoagDao(obj, endpoint, context, appComponent);
+    public PpobPaymentInteractor(Object base, Context context) {
+        this.dao = new OttoagDao(base, CORE.getEndpoint(), context, CORE.getAppComponent());
     }
 
-    public void callPaymentInt(String productPool, final PpobOttoagPaymentRequestModel requestModel, final PpobPaymentInteractorInterface.PpobPaymentCallback callback) {
+    public void callPaymentInt(String productPool, final PpobOttoagPaymentRequestModel requestModel, final PpobPaymentInteractorInterface2 callback) {
         if (dao != null)
             dao.ppobOttoagPaymentDao(productPool, requestModel, new Callback() {
                 @Override
@@ -50,7 +51,7 @@ public class PpobPaymentInteractor {
             });
     }
 
-    public void callPaymentQrInt(String productPool, final PpobOttoagPaymentRequestModel requestModel, final PpobPaymentInteractorInterface.PpobPaymentCallback callback) {
+    public void callPaymentQrInt(String productPool, final PpobOttoagPaymentRequestModel requestModel, final PpobPaymentInteractorInterface2 callback) {
         if (dao != null)
             dao.PpobOttoagQrPaymentDao(productPool, requestModel, new Callback() {
                 @Override
@@ -78,7 +79,7 @@ public class PpobPaymentInteractor {
             });
     }
 
-    public void callAdviceInt(String productPool, final PpobOttoagPaymentRequestModel requestModel, final PpobPaymentInteractorInterface.PpobPaymentCallback callback) {
+    public void callAdviceInt(String productPool, final PpobOttoagPaymentRequestModel requestModel, final PpobPaymentInteractorInterface2 callback) {
         if (dao != null)
             dao.PpobOttoagAdviceDao(productPool, requestModel, new Callback() {
                 @Override
